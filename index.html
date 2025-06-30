@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Register</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <div class="theme-toggle">
+    <i class='bx bx-sun'></i>
+    <label class="switch">
+      <input type="checkbox" id="dark-mode-toggle">
+      <span class="slider round"></span>
+    </label>
+    <i class='bx bx-moon'></i>
+  </div>
+
+  <div class="container">
+    <!-- Login Form -->
+    <div class="form-box login">
+      <form id="login-form">
+        <h1>Login</h1>
+        <div class="input-box">
+          <input type="text" placeholder="Username" id="login-username" required>
+          <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" id="login-password" required>
+          <i class='bx bxs-lock-alt'></i>
+          <span class="toggle-password" onclick="togglePassword('login-password')">👁</span>
+        </div>
+        <div class="forgot-link">
+          <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <p>or login with social platforms</p>
+        <div class="social-icons">
+          <a href="#"><i class='bx bxl-google'></i></a>
+          <a href="#"><i class='bx bxl-facebook'></i></a>
+          <a href="#"><i class='bx bxl-github'></i></a>
+          <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="form-box register">
+      <form id="register-form">
+        <h1>Registration</h1>
+        <div class="input-box">
+          <input type="text" placeholder="Username" id="register-username" required>
+          <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+          <input type="email" placeholder="Email" id="register-email" required>
+          <i class='bx bxs-envelope'></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" id="register-password" required>
+          <i class='bx bxs-lock-alt'></i>
+          <span class="toggle-password" onclick="togglePassword('register-password')">👁</span>
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <p>or register with social platforms</p>
+        <div class="social-icons">
+          <a href="#"><i class='bx bxl-google'></i></a>
+          <a href="#"><i class='bx bxl-facebook'></i></a>
+          <a href="#"><i class='bx bxl-github'></i></a>
+          <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Toggle Panel -->
+    <div class="toggle-box">
+      <div class="toggle-panel toggle-left">
+        <h1>Hello, Welcome!</h1>
+        <p>Don't have an account?</p>
+        <button class="btn register-btn">Register</button>
+      </div>
+      <div class="toggle-panel toggle-right">
+        <h1>Welcome Back!</h1>
+        <p>Already have an account?</p>
+        <button class="btn login-btn">Login</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
